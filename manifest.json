@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "スコアボード＆tag拡張add-on",
+		"description": "rituto135877作 https://www.youtube.com/@rituto13",
+		"uuid": "bd09ad33-5be6-44b1-b495-53ecff50f036",
+		"version": [
+			0,
+			0,
+			1
+		],
+		"min_engine_version": [
+			1,
+			19,
+			40
+		]
+	},
+	"modules": [
+		{
+			"description": "Script resources",
+			"language": "javascript",
+			"type": "script",
+			"uuid": "907b59a9-367b-4280-8768-5de0e6e40526",
+			"version": [
+				0,
+				0,
+				1
+			],
+			"entry": "scripts/index.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.6.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0-beta"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"2.6.1"
+			],
+			"dash": [
+				"0.10.10"
+			]
+		}
+	}
+}
