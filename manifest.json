@@ -2,12 +2,12 @@
 	"format_version": 2,
 	"header": {
 		"name": "スコアボード＆tag拡張add-on",
-		"description": "rituto135877作 https://www.youtube.com/@rituto13",
-		"uuid": "bd09ad33-5be6-44b1-b495-53ecff50f036",
+		"description": "rituto135877作 https://www.youtube.com/@rituto13 ver 0.02",
+		"uuid": "0bb8be6d-6406-44ae-ae5a-71579846eb8f",
 		"version": [
 			0,
 			0,
-			1
+			2
 		],
 		"min_engine_version": [
 			1,
@@ -20,7 +20,7 @@
 			"description": "Script resources",
 			"language": "javascript",
 			"type": "script",
-			"uuid": "907b59a9-367b-4280-8768-5de0e6e40526",
+			"uuid": "231ab2fb-bbd4-4598-b44e-632344cf7f08",
 			"version": [
 				0,
 				0,
