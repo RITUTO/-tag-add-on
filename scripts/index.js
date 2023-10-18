@@ -22,12 +22,21 @@ world.afterEvents.playerBreakBlock.subscribe(ev =>{
         }else{
           taisyou.removeTag("op")
         }
+        if (taisyou.isSneaking){
+          taisyou.runCommandAsync("scoreboard objectives add sneak dummy")
+          taisyou.runCommandAsync(`scoreboard players add @s sneak 1`)//スニークタイムカウント
+        }else{
+          taisyou.runCommandAsync(`scoreboard players reset @s sneak`)
+        }
   }} , 0)
   
   world.afterEvents.entityHitEntity.subscribe(ev =>{//ヒット数カウント
     const entiy = ev.damagingEntity
+    const hitentiy = ev.hitEntity
     entiy.runCommandAsync("scoreboard objectives add hitcount dummy")
     entiy.runCommandAsync("scoreboard players add @s hitcount 1")
+    entiy.addTag("attack")//受けたmobと攻撃したmobにtag追加
+    hitentiy.runCommandAsync("tag @s add hit")
 }
     )
     world.beforeEvents.chatSend.subscribe(ev => { //チャットが送信されたら
