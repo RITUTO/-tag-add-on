@@ -1,7 +1,15 @@
 import { EntitySkinIdComponent, ScriptEventCommandMessageAfterEvent, system, world } from "@minecraft/server";//インポート
 import { ModalFormData,ActionFormData,MessageFormData} from "@minecraft/server-ui";
+world.afterEvents.itemUseOn.subscribe(async ev => {
+  const { source: player,itemStack:item} = ev;
+  
 
-                
+  var ke = (player.getTags().filter(t => t.startsWith("blockput")))//blockput tagがついてるか確認
+  if (ke[0] !== undefined){
+  player.removetags(`tag @s remove "${ke[0]}"`)
+  }
+  player.runCommandAsync(`tag @s add "blockput:${item.typeId}"`);
+})          
 
 
 world.afterEvents.playerBreakBlock.subscribe(ev =>{
@@ -28,6 +36,18 @@ world.afterEvents.playerBreakBlock.subscribe(ev =>{
         }else{
           taisyou.runCommandAsync(`scoreboard players reset @s sneak`)
         }
+        taisyou.getTags().forEach((tag) => {
+          if (tag.startsWith("hastag:")) {
+           let b = tag.replace("hastag:", "");
+           taisyou.runCommandAsync(`tag @s remove ${tag}`)
+            if (taisyou.hasTag(b))
+           {
+            taisyou.runCommandAsync(`tag @s add true`)
+
+          }else{
+            taisyou.runCommandAsync(`tag @s add false`)
+          }
+        }})
   }} , 0)
   
   world.afterEvents.entityHitEntity.subscribe(ev =>{//ヒット数カウント
@@ -60,7 +80,7 @@ world.afterEvents.playerBreakBlock.subscribe(ev =>{
     }else{
       sender.runCommandAsync("scoreboard objectives add chatcount dummy")
       sender.runCommandAsync(`scoreboard players add @s chatcount 1`)//チャットカウント
-      var ke = (sender.getTags().filter(t => t.startsWith("word")))//word tagがついてるか確認
+      var ke = (sender.getTags().filter(t => t.startsWith("chat")))//word tagがついてるか確認
       if (ke[0] !== undefined){
       sender.runCommandAsync(`tag @s remove "${ke[0]}"`)
       }
