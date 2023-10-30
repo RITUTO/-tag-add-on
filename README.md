@@ -1,5 +1,5 @@
 # スコアボード＆TAGアドオン
-[English](https://github.com/RITUTO/Scoreboardtag-/blob/main/README_EN.md)
+[English](https://github.com/RITUTO/Scoreboardtag-/blob/main/README_EN.md)  
 スコアボードでいろんなものをカウントできるようにしましたていってもそこまで種類は多くない
 wiki
 https://github.com/RITUTO/Scoreboardtag-/wiki/
