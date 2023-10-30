@@ -1,4 +1,5 @@
 # スコアボード＆TAGアドオン
+[English](https://github.com/RITUTO/Scoreboardtag-/blob/main/README_EN.md)
 スコアボードでいろんなものをカウントできるようにしましたていってもそこまで種類は多くない
 wiki
 https://github.com/RITUTO/Scoreboardtag-/wiki/
@@ -9,7 +10,7 @@ https://github.com/RITUTO/Scoreboardtag-/wiki/
 0.01実装    
 0.02　attack TAG＆hit TAGついかsneakスコア追加      
  0.03 1.20.40対応
- 0.04 ridme_en.md ついか
+ 0.04 readme_en.md ついか
 
 [サポートサーバー](https://discord.gg/hTTxPMFvYc) 
 
