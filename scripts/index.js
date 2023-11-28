@@ -6,7 +6,7 @@ world.afterEvents.itemUseOn.subscribe(async (/** @type {{ source: any; itemStack
 
   var ke = (player.getTags().filter((/** @type {string} */ t) => t.startsWith("blockput")))//blockput tagがついてるか確認
   if (ke[0] !== undefined){
-  player.removetags(`tag @s remove "${ke[0]}"`)
+  player.runCommandAsync(`tag @s remove "${ke[0]}"`)
   }
   player.runCommandAsync(`tag @s add "blockput:${item.typeId}"`);
 })          
@@ -77,6 +77,12 @@ world.afterEvents.playerBreakBlock.subscribe((/** @type {{ player: any; brokenBl
       if (message == kekkafisp[1]){
         ev.cancel = true
       }
+      var ke = (sender.getTags().filter((/** @type {string} */ t) => t.startsWith("chat")))//word tagがついてるか確認
+      if (ke[0] !== undefined){
+      sender.runCommandAsync(`tag @s remove "${ke[0]}"`)
+      }
+      system.runTimeout( function(){
+      sender.addTag(`chat:${message}`)})
     }else{
       sender.runCommandAsync("scoreboard objectives add chatcount dummy")
       sender.runCommandAsync(`scoreboard players add @s chatcount 1`)//チャットカウント
