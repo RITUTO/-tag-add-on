@@ -13,5 +13,6 @@ https://github.com/RITUTO/Scoreboardtag-/wiki/
  0.03 1.20.40 compatible  
  0.04 ridme_en.md  
  0.05Minor bug fixes
+0.06 Compatible with 1.20.50
 # support server
 [support server](https://discord.gg/hTTxPMFvYc) 
