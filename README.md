@@ -12,6 +12,7 @@ https://github.com/RITUTO/Scoreboardtag-/wiki/<Br>
  0.04 readme_en.md ついか<Br>
 0.05ちょっとしたバグ修正<Br>
 0.06 1.20.50に対応
+0.77 itemUse tag追加
 # サポートサーバー
 [サポートサーバー](https://discord.gg/hTTxPMFvYc) 
 
