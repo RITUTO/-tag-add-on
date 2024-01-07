@@ -93,3 +93,6 @@ world.afterEvents.playerBreakBlock.subscribe((/** @type {{ player: any; brokenBl
       system.runTimeout( function(){
       sender.addTag(`chat:${message}`)})
     }}})
+world.afterEvents.itemUseOn.subscribe(async (ev) =>{
+  ev.source.addTag(`itemUse:${ev.itemStack.typeId}`)
+})
