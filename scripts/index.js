@@ -94,5 +94,5 @@ world.afterEvents.playerBreakBlock.subscribe((/** @type {{ player: any; brokenBl
       sender.addTag(`chat:${message}`)})
     }}})
 world.afterEvents.itemUseOn.subscribe(async (ev) =>{
-  ev.source.addTag(`itemUse:${ev.itemStack.typeId}`)
+  ev.source.addTag(`itemUse:id:${ev.itemStack.typeId} name:${ev.itemStack.nameTags}`)
 })
